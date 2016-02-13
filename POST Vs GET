@@ -1,0 +1,38 @@
+<h2>What is HTTP?</h2>
+
+The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
+
+HTTP works as a request-response protocol between a client and server.
+
+A web browser may be the client, and an application on a computer that hosts a web site may be the server.
+
+Example: A client (browser) submits an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.
+
+<H2>Two HTTP Request Methods: GET and POST</h2>
+
+Two commonly used methods for a request-response between a client and server are: GET and POST.
+
+    <h3>GET</h3> - Requests data from a specified resource
+    <h3>POST</h3> - Submits data to be processed to a specified resource
+  <h2>The GET Method</h2>
+  <h4>ex :</h4> /test/demo_form.asp?name1=value1&name2=value2
+  <br>
+  <h2>The POST Method</h2>
+POST /test/demo_form.asp 
+Host: example.com
+name1=value1&name2=value2
+
+<h2>About GET</h2>
+
+    GET requests can be cached
+    GET requests remain in the browser history
+    GET requests can be bookmarked
+    GET requests should never be used when dealing with sensitive data
+    GET requests have length restrictions
+    GET requests should be used only to retrieve data
+<H2>About POST </h2>
+
+    POST requests are never cached
+    POST requests do not remain in the browser history
+    POST requests cannot be bookmarked
+    POST requests have no restrictions on data length
