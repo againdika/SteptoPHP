@@ -1,0 +1,73 @@
+To work with this code; hope you have some DBMS Knowledge. and im not goigng to discuss that matters here.
+To work with PHP+MySQL first we have to use following methods.
+    1. mysql_connect()
+    2. mysql_select_db()
+    3. mysql_close()
+    
+those methods are use for following purposes respectfully..
+    1. Open a connection to MySQL itself
+    2. Specify the database we want to open
+    3. Close the connection
+
+01. Open Connection
+    <?PHP
+    
+    $user_name = "root";
+    $password = "";
+    $database = "MyDB";
+    $server = "127.0.0.1";
+    
+    mysql_connect($server, $user_name, $password);
+    
+    print "Connection to the Server opened";
+    
+    ?>
+
+02. Specify the database you want to open
+    $database = "MyDB";
+    
+      $db_work = mysql_connect($server, $user_name, $password);
+      
+      $db_found = mysql_select_db($database, $db_work);
+      
+      if ($db_found) {
+      
+      print "Database Found " . $db_work;
+      
+      }
+      else {
+      
+      print "Database NOT Found " . $db_work;
+      
+      }
+    
+03. Close the connection
+    mysql_close( $db_work );
+    
+Final full Code
+    <?PHP
+    
+    $user_name = "root";
+    $password = "";
+    $database = "MyDB";
+    $server = "127.0.0.1";
+    
+    $db_work = mysql_connect($server, $user_name, $password);
+    
+    $db_found = mysql_select_db($database, $db_work);
+    
+    if ($db_found) {
+    
+    print "Database Found ";
+    mysql_close($db_work);
+    
+    }
+    else {
+    
+    print "Database NOT Found ";
+    
+    }
+    
+    ?>
+    
+    Now that we've got a connection to the database, it's time to look at how you can access the data in the database
